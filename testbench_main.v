@@ -24,8 +24,8 @@ module testbench;
     reg  resetn;
     reg  enable;
     wire [3:0] decimal_point;
-    wire 1secsig;
-    reg[2:0] dest;
+    wire onesecsig;
+    wire[2:0] dest;
     wire[2:0] car_location;
     wire[1:0] state;
     wire[2:0] doorcnt;
@@ -34,6 +34,11 @@ module testbench;
     wire timerin;
     wire timerrst;
 
+    reg[4:0] btncar;
+    reg[4:0] btnout;
+    wire[4:0] btnidccar;
+    wire[4:0] btnidcout;
+    
 // Testbench 작성시에는 output을 wire로 받고, input을 reg로 넣어야함.
 
 
@@ -52,7 +57,6 @@ initial begin
     open <= 0;
     resetn <= 1'b0;
     enable <= 1'b1;
-    dest <= 4;
     #(200*`half_clock);
     open <= 1;
     resetn <= 1'b1;
@@ -75,7 +79,6 @@ initial begin
     #(1000*`half_clock);
     open <= 1;
     enable <= 1'b1;
-    dest <= 2;
     #(200*`half_clock);
 
     #(20000*`half_clock);
@@ -86,7 +89,7 @@ end
         .clk(clk),
         .resetn(resetn), 
         .enable(enable), 
-        .timerin(1secsig),
+        .timerin(onesecsig),
         .dest(dest),
         .open(open),
         .shut(shut),
@@ -101,10 +104,21 @@ end
         .clk(clk),
         .resetn(timer_out),
         .enable(enable),
-        .carryOut(1secsig),
+        .carryOut(onesecsig),
         .countVal(decimal_point)
     );
     assign timer_out = (!timerrst)&&(resetn);
-     
-    
+
+dest_setter mcds(
+    .clk(clk),
+    .resetn(resetn), 
+    .enable(enable), 
+    .btncar(btncar),
+    .btnout(btncar),
+    .state(state),
+    .location(car_location),
+    .dest(dest),
+    .btnidccar(btnidccar),
+    .btnidcout(btnidcout)
+);
 endmodule 

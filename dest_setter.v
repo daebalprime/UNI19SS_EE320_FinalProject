@@ -5,23 +5,11 @@ module dest_setter (
     input [1:0] state,
     input reg [2:0] location,
     output reg [2:0] dest,
-    output reg open1,
-    output reg [4:0] btnidccar,
-    output reg [4:0] btnidcout,
+    output [4:0] btnidccar,
+    output reg [4:0] btnidcout
 );
     integer index;
     integer prevdest;
-
-    reg [4:0] btnoff;
-
-    always @(posedge clk) begin
-        if (state == 0 || state == 1)begin
-            if (btncar[location-1] || btnout[location-1])   
-                open1<=0;
-            else
-                open1<=1;
-        end
-    end
 
     always @(posedge clk or negedge resetn) begin
         if (!resetn) begin
