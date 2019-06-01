@@ -1,0 +1,59 @@
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# File: C:\Users\neonb\Desktop\main_module1.csv
+# Generated on: Sun Jun 02 01:56:29 2019
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,Fitter Location,I/O Standard,Reserved,Current Strength,Strict Preservation
+btncar[4],Input,PIN_H3,1,PIN_H3,3.3-V LVTTL,,,
+btncar[3],Input,PIN_J2,1,PIN_J2,3.3-V LVTTL,,,
+btncar[2],Input,PIN_J3,1,PIN_J3,3.3-V LVTTL,,,
+btncar[1],Input,PIN_K2,1,PIN_K2,3.3-V LVTTL,,,
+btncar[0],Input,PIN_K3,1,PIN_K3,3.3-V LVTTL,,,
+btnidccar[4],Output,PIN_M2,1,PIN_J12,,,,
+btnidccar[3],Output,PIN_M4,1,PIN_M10,,,,
+btnidccar[2],Output,PIN_N2,1,PIN_P9,,,,
+btnidccar[1],Output,PIN_P2,1,PIN_L10,,,,
+btnidccar[0],Output,PIN_N10,4,PIN_J16,,,,
+btnidcout[4],Output,PIN_M3,1,PIN_J15,,,,
+btnidcout[3],Output,PIN_N1,1,PIN_R10,,,,
+btnidcout[2],Output,PIN_N3,1,PIN_T10,,,,
+btnidcout[1],Output,PIN_T11,4,PIN_M9,,,,
+btnidcout[0],Output,PIN_R11,4,PIN_K12,,,,
+btnout[4],Input,PIN_E3,1,PIN_E3,3.3-V LVTTL,,,
+btnout[3],Input,PIN_F1,1,PIN_F1,3.3-V LVTTL,,,
+btnout[2],Input,PIN_F3,1,PIN_F3,3.3-V LVTTL,,,
+btnout[1],Input,PIN_G1,1,PIN_G1,3.3-V LVTTL,,,
+btnout[0],Input,PIN_G3,1,PIN_G3,3.3-V LVTTL,,,
+car_location[2],Output,PIN_D1,1,PIN_D1,3.3-V LVTTL,,,
+car_location[1],Output,PIN_C2,1,PIN_C2,3.3-V LVTTL,,,
+car_location[0],Output,PIN_D3,1,PIN_D3,3.3-V LVTTL,,,
+clk,Input,PIN_H5,1,PIN_H5,3.3-V LVTTL,,,
+dest[2],Output,PIN_C3,1,PIN_C3,3.3-V LVTTL,,,
+dest[1],Output,PIN_D2,1,PIN_D2,3.3-V LVTTL,,,
+dest[0],Output,PIN_E1,1,PIN_E1,3.3-V LVTTL,,,
+doorcnt[2],Output,,,PIN_M8,,,,
+doorcnt[1],Output,PIN_T13,4,PIN_T13,3.3-V LVTTL,,,
+doorcnt[0],Output,PIN_R13,4,PIN_R13,3.3-V LVTTL,,,
+enable,Input,PIN_E2,1,PIN_E2,3.3-V LVTTL,,,
+movecnt[1],Output,PIN_P13,4,PIN_P13,3.3-V LVTTL,,,
+movecnt[0],Output,PIN_T12,4,PIN_T12,3.3-V LVTTL,,,
+open,Input,PIN_L1,1,PIN_L1,3.3-V LVTTL,,,
+resetn,Input,PIN_K4,1,PIN_K4,3.3-V LVTTL,,,
+shut,Input,PIN_L2,1,PIN_L2,3.3-V LVTTL,,,
+state[1],Output,PIN_J4,1,PIN_J4,3.3-V LVTTL,,,
+state[0],Output,PIN_M1,1,PIN_M1,3.3-V LVTTL,,,

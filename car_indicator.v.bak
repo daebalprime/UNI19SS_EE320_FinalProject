@@ -4,8 +4,8 @@ module car_indicator (
     input [2:0] dest,
     input open,
     input shut,
-    input [4:0] btnidccar,
-    input [4:0] btnidcout,
+    input [4:0] btncaridc,
+    input [4:0] btnoutidc,
     output timerrst, 
     output reg [2:0] location,
     output reg [1:0] state,
@@ -13,7 +13,8 @@ module car_indicator (
     output reg [1:0] movecnt
 );
 
-    // state: 0 for open, 1 for stop, 2 for upward, 3 for downward
+    wire temp;
+    // 0 for open, 1 for stop, 2 for upward, 3 for downward
 
     always @(posedge clk or negedge resetn) begin
         if (!resetn) begin
@@ -56,15 +57,20 @@ module car_indicator (
         
         // 별도 요청이 있는 상태를  location != dest라고 본다.
         else begin // upward or downward
-            if (location == dest ||(btnidccar[location-1]||btnidcout[location-1])) begin
+            if (location == dest) begin
+            // if (location == dest || 현재 층수 on)
                 state <= 0;
                 doorcnt <= 5;
             end
             else if (movecnt == 0) begin            
                 if (state == 2) begin
                     if (location < dest)begin
+        // 만약 해당 층수의 버튼이 on이라면? -> state open 그리고 버튼 끄기
                         location <= location + 1;
                         movecnt <= 2;
+                    end
+                    else if(btncaridc[location-1]||[btnoutidc[location-1]) begin
+                        state <= 0;                        
                     end
                     else 
                         state <= 0;

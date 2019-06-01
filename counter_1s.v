@@ -7,16 +7,16 @@ module counter_1s (
     output reg [3:0] countVal
 );
 
-    reg [5:0] countClk;
+    reg [6:0] countClk;
     reg [9:0] count1000;
     reg [6:0] count100;
     wire countClk_exp;
     wire count1000_exp;
     wire count100_exp;
 
-    parameter par_num_clk = 3; // 65
-    parameter par_num_1000 = 3; // 999
-    parameter par_num_100 = 3; // 99
+    parameter par_num_clk = 65; // 65
+    parameter par_num_1000 = 999; // 999
+    parameter par_num_100 = 99; // 99
     parameter par_100ms = 9;
 
     always @(posedge clk or negedge resetn) begin
