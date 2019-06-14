@@ -12,7 +12,7 @@ module dest_setter (
         if (!resetn) begin
             dest <= 1;
         end
-        // 정지상태에서의 dest 설정
+        // 정지상태에서의 dest 설
         else if((state==0||state==1)) begin
             if(btnidcout[0] || btnidccar[0])
                 dest<=1;
